@@ -236,26 +236,26 @@ type Patch struct {
 	From  string `json:"from,omitempty"`
 }
 
-type OrderErrorDetail struct {
+type OrderErrorDetails struct {
 	Issue       string `json:"issue,omitempty"`
 	Description string `json:"description,omitempty"`
 }
 
 type OrderDetail struct {
-	Id                    string            `json:"id,omitempty"`
-	Status                string            `json:"status,omitempty"` // CREATED、SAVED、APPROVED、VOIDED、COMPLETED、PAYER_ACTION_REQUIRED
-	PaymentSource         *PaymentSource    `json:"payment_source,omitempty"`
-	Intent                string            `json:"intent,omitempty"`
-	ProcessingInstruction string            `json:"processing_instruction,omitempty"`
-	Payer                 *Payer            `json:"payer,omitempty"`
-	PurchaseUnits         []*PurchaseUnit   `json:"purchase_units,omitempty"`
-	Links                 []*Link           `json:"links,omitempty"`
-	CreateTime            string            `json:"create_time,omitempty"`
-	UpdateTime            string            `json:"update_time,omitempty"`
-	Name                  string            `json:"name,omitempty"`
-	Detail                *OrderErrorDetail `json:"detail,omitempty"`
-	Message               string            `json:"message,omitempty"`
-	Debug_Id              string            `json:"debug_id,omitempty"`
+	Id                    string               `json:"id,omitempty"`
+	Status                string               `json:"status,omitempty"` // CREATED、SAVED、APPROVED、VOIDED、COMPLETED、PAYER_ACTION_REQUIRED
+	PaymentSource         *PaymentSource       `json:"payment_source,omitempty"`
+	Intent                string               `json:"intent,omitempty"`
+	ProcessingInstruction string               `json:"processing_instruction,omitempty"`
+	Payer                 *Payer               `json:"payer,omitempty"`
+	PurchaseUnits         []*PurchaseUnit      `json:"purchase_units,omitempty"`
+	Links                 []*Link              `json:"links,omitempty"`
+	CreateTime            string               `json:"create_time,omitempty"`
+	UpdateTime            string               `json:"update_time,omitempty"`
+	Name                  string               `json:"name,omitempty"`
+	Details               []*OrderErrorDetails `json:"details,omitempty"`
+	Message               string               `json:"message,omitempty"`
+	Debug_Id              string               `json:"debug_id,omitempty"`
 }
 
 type PaymentSource struct {
